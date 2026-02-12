@@ -1,10 +1,17 @@
+import { StackScreenProps } from '@react-navigation/stack'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
+import { stylesGlobal } from '../theme/appTheme'
 
-export const Pantalla3Screen = () => {
+interface Props extends StackScreenProps<any, any> {};
+export const Pantalla3Screen = ( {navigation}: Props) => {
   return (
-    <View>
-            <Text>Pantalla 3 Screen</Text>
+    <View style={stylesGlobal.container}>
+            <Text style={stylesGlobal.title}>Pantalla 3 Screen</Text>
+            <Button title= 'Regresar'
+                onPress={() => navigation.goBack()}/> 
+            <Button title= 'Ir Home'
+                onPress={() => navigation.popToTop()}/>
         </View>
   )
 }
