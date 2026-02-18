@@ -2,8 +2,9 @@ import { StackScreenProps } from '@react-navigation/stack'
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 import { stylesGlobal } from '../theme/appTheme'
+import { RootStackParams } from '../navigator/StackNavigator'
 
-interface Props extends StackScreenProps<any, any> {};
+type Props = StackScreenProps<RootStackParams, 'Pantalla3'>;
 export const Pantalla3Screen = ( {navigation}: Props) => {
   return (
     <View style={stylesGlobal.container}>
